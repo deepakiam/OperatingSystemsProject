@@ -1,0 +1,35 @@
+What are the advantages and disadvantages of each of the two scheduling policies and the original scheduling policy in XINU? 
+
+Response :-
+
+Linux Scheduling Policy :-
+
+advantages :- 
+	In the linux scheduling policy the process with the highest priority is given the most time in an epoch to finish the task. Thus the more important processes will get executed faster.
+	Starvation will not occur for processes with lower priority.
+	If a process does not use up its time in one epoch, it is given more time in next epoch to balance out the overall priority of the process. So the important processes get relatively equal time of the processor.
+
+disadvantages :-
+	Everytime the goodness for each process should be calculated and compared with other process's goodness. This results into more processing time for the processor for the purpose of scheduling.
+	
+
+Real Time Scheduling Policy :-
+
+advantages :-
+	The real time processes are run with much higher importance and for much greater time than the normal or batch processes.
+	Batch and normal processes will not starve, because they have 30% processing time of the processor.
+	The response time is fast for real time processes.
+
+disadvantages :-
+	The random numbers generated must be properly random otherwise the execution will be biased and uneven.
+
+
+Xinu Scheduling Policy :-
+
+advantages :-
+	The processes with highest priority is executed first.
+	The processes with equal priority will occur in round robin.
+	very easy implementation as very low computation is required.
+
+disadvantages :-
+	if the process does not have high priority, it might get stuck in starvation.

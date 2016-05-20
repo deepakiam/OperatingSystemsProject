@@ -1,0 +1,6 @@
+The test cases 1-6 works.
+7th test case hangs.
+Wait for 2 recurrances of the output.
+1-10 works.
+10 hangs.
+11 and 12 works when run independently.
